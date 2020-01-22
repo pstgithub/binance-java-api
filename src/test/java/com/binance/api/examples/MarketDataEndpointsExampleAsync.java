@@ -32,7 +32,7 @@ public class MarketDataEndpointsExampleAsync {
     });
 
     // Getting all latest prices (async)
-    client.getAllPrices((List<TickerPrice> response) -> {
+    client.getPrice("NEOETH", (TickerPrice response) -> {
       System.out.println(response);
     });
 
@@ -44,7 +44,7 @@ public class MarketDataEndpointsExampleAsync {
         (List<Candlestick> response) -> System.out.println(response));
 
     // Book tickers (async)
-    client.getBookTickers(response -> System.out.println(response));
+    client.getBookTicker("NEOETH", response -> System.out.println(response));
 
     // Exception handling
     try {

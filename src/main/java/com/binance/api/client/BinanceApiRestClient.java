@@ -138,11 +138,6 @@ public interface BinanceApiRestClient {
   List<TickerStatistics> getAll24HrPriceStatistics();
 
   /**
-   * Get Latest price for all symbols.
-   */
-  List<TickerPrice> getAllPrices();
-
-  /**
    * Get latest price for <code>symbol</code>.
    *
    * @param symbol ticker symbol (e.g. ETHBTC)
@@ -150,9 +145,9 @@ public interface BinanceApiRestClient {
   TickerPrice getPrice(String symbol);
 
   /**
-   * Get best price/qty on the order book for all symbols.
+   * Get best price/qty on the order book for <code>symbol</code>.
    */
-  List<BookTicker> getBookTickers();
+  BookTicker getBookTicker(String symbol);
 
   // Account endpoints
 

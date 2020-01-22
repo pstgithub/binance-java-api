@@ -118,13 +118,8 @@ public class BinanceApiRestClientImpl implements BinanceApiRestClient {
   }
 
   @Override
-  public List<TickerPrice> getAllPrices() {
-    return executeSync(binanceApiService.getLatestPrices());
-  }
-
-  @Override
-  public List<BookTicker> getBookTickers() {
-    return executeSync(binanceApiService.getBookTickers());
+  public BookTicker getBookTicker(String symbol) {
+    return executeSync(binanceApiService.getBookTicker(symbol));
   }
 
   @Override

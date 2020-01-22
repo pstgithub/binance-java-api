@@ -31,8 +31,8 @@ public class MarketDataEndpointsExample {
     System.out.println(tickerStatistics);
 
     // Getting all latest prices
-    List<TickerPrice> allPrices = client.getAllPrices();
-    System.out.println(allPrices);
+    TickerPrice price = client.getPrice("NEOETH");
+    System.out.println(price);
 
     // Getting agg trades
     List<AggTrade> aggTrades = client.getAggTrades("NEOETH");
@@ -43,8 +43,8 @@ public class MarketDataEndpointsExample {
     System.out.println(candlesticks);
 
     // Getting all book tickers
-    List<BookTicker> allBookTickers = client.getBookTickers();
-    System.out.println(allBookTickers);
+    BookTicker bookTicker = client.getBookTicker("NEOETH");
+    System.out.println(bookTicker);
 
     // Exception handling
     try {
